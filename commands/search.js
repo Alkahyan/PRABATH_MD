@@ -179,8 +179,8 @@ cmd({
     },
     async(Void, citel, text) => {
         var inputnumber = text.split(" ")[0]
-        if (!inputnumber.includes('x')) return citel.reply('You did not add x\nExample: iswa 9196285162xx')
-        citel.reply(`Searching for WhatsApp account in given range...`)
+        if (!inputnumber.includes('x')) return citel.reply('مثال x\nExample:..sn 9196285162xx')
+        citel.reply(`*انتظر بخمن يا زبي...*`)
 
         function countInstances(string, word) {
             return string.split(word).length - 1;
@@ -196,7 +196,7 @@ cmd({
         } else if (random_length == 3) {
             randomxx = 1000
         }
-        var text = `*--『 List of Whatsapp Numbers 』--*\n\n`
+        var text = `*--『 تخمين بزوب دراكن 』--*\n\n`
         var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
         var nowhatsapp = `\n*Numbers with no WhatsApp account within provided range.*\n`
         for (let i = 0; i < randomxx; i++) {
@@ -226,7 +226,7 @@ cmd({
                 if (anu1 == '401' || anu1.status.length == 0) {
                     nobio += `wa.me/${anu[0].jid.split("@")[0]}\n`
                 } else {
-                    text += `🧐 *Number:* wa.me/${anu[0].jid.split("@")[0]}\n ✨*Bio :* ${anu1.status}\n🍁*Last update :* ${moment(anu1.setAt).tz('Asia/Kolkata').format('HH:mm:ss DD/MM/YYYY')}\n\n`
+                    text += `🧐 *الرقم:* wa.me/${anu[0].jid.split("@")[0]}\n ✨*البايو :* ${anu1.status}\n🍁*تاريخ البايو:* ${moment(anu1.setAt).tz('Asia/Kolkata').format('HH:mm:ss DD/MM/YYYY')}\n\n`
                 }
             } catch {
                 nowhatsapp += `${number0}${i}${number1}\n`
